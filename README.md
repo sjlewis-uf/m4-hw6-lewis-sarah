@@ -1,3 +1,9 @@
+I had a lot of issues with this assignment.  I tried to follow the lectures and thought I was doing things correctly but somehow my code made things worse so I // all my lines of code to convert them to comments to at least leave what I knew was correct in an attempt to get points for this assignment.
+
+I re-watched all the lectures, I tried to follow Code Academy, I tried to utilize W3Schools, and Google resources but every time I thought I had it correct, the test proved otherwise.
+
+I am hoping spending more time with the material will help me for the next assignment and would appreciate any insight.
+
 # JavaScript Pizza
 
 ## Background

@@ -18,16 +18,18 @@ function getPizzaOrder() {
     `Please enter the type of crust (${formatPrice(thickCrustUpcharge)} upcharge for Thick crust)`
   )
   // set the pizza object's 'crust' property to the user's response
-    pizza.crust = crust
   // HINT: prompt() returns a string
   // HINT: You may wish to use .toLowerCase() and .trim()
   // if the user specified 'thick' crust, add thickCrustUpcharge
+  // to pizza.cost
+  // YOUR CODE HERE
+  pizza.crust = crust
   if (pizza.crust === 'thick') {
     pizza.cost += thickCrustUpcharge
   }
-  // to pizza.cost
-  // YOUR CODE HERE
+  if (crust && crust.trim()) {
 
+  }
 
   var toppings = prompt("Please enter additional toppings (comma separated)")
   // HINT: prompt() will return an empty string "" if the user presses 'OK' without entering a value
@@ -36,6 +38,31 @@ function getPizzaOrder() {
   // if the user has added toppings, add toppingsFee multiplied by
   // the number of toppings added to pizza.cost
   // YOUR CODE HERE
+  //var toppings = {
+//    toppings: [
+//      'pepperoni',
+//      'bacon',
+//      'ham',
+//      'sausage'
+//    ],
+//    addTopping: function(newTopping) {
+//      if (newTopping && typeof newTopping === 'string') {      this.toppings.push(newTopping)
+//      }
+//    }
+//  }
+  //var listHasBeenChanged = true
+//  while (listHasBeenChanged) {
+//    listHasBeenChanged = false
+//      alert('Your toppings are: ' + toppings.split(','))
+//      var addtopping = confirm('Add topping?')
+//      toppings.push(toppingToAdd)
+//      listHasBeenChanged = true
+//    }
+//  }
+//  if (toppings && toppings.trim()) {
+//    alert('Your toppings are: ' + toppings.trim())
+//  }
+
 
   var extraCheese = confirm("Would you like extra cheese?")
   // HINT: confirm() returns a boolean
@@ -54,6 +81,10 @@ function getPizzaOrder() {
   // if order is NOT for delivery, set pizza.saleType to "take-out"
   // if order if for delivery, add deliveryFee to pizza.cost
   // YOUR CODE HERE
+  //boolean(pizza.saletype == delivery)
+  if (pizza.saleType === 'delivery') {
+    pizza.cost += deliveryFee
+  }
 
   return pizza
 }
