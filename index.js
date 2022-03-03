@@ -38,27 +38,10 @@ function getPizzaOrder() {
   // if the user has added toppings, add toppingsFee multiplied by
   // the number of toppings added to pizza.cost
   // YOUR CODE HERE
-  //var toppings = {
-//    toppings: [
-//      'pepperoni',
-//      'bacon',
-//      'ham',
-//      'sausage'
-//    ],
-//    addTopping: function(newTopping) {
-//      if (newTopping && typeof newTopping === 'string') {      this.toppings.push(newTopping)
-//      }
-//    }
-//  }
-  //var listHasBeenChanged = true
-//  while (listHasBeenChanged) {
-//    listHasBeenChanged = false
-//      alert('Your toppings are: ' + toppings.split(','))
-//      var addtopping = confirm('Add topping?')
-//      toppings.push(toppingToAdd)
-//      listHasBeenChanged = true
-//    }
-//  }
+  var pizzaToppings = "pepperoni, bacon, mushrooms, pineapple, ham, basil, tomato, sausage, spinach, peppers";
+
+  const words = pizzaToppings.split('pepperoni, bacon, mushrooms, pineapple, ham, basil, tomato, sausage, spinach, peppers');
+
 //  if (toppings && toppings.trim()) {
 //    alert('Your toppings are: ' + toppings.trim())
 //  }
@@ -69,8 +52,7 @@ function getPizzaOrder() {
   // if the user specifies extra cheese, set pizza.extraCheese to true or false
   // if the user specifies extra cheese, add extraCheeseUpcharge to pizza.cost
   // YOUR CODE HERE
-  //  var pizza.extraCheese = true
-  //  Boolean(pizza.extraCheese)
+  pizza.extraCheese = true;
     if (pizza.extraCheese === 'true') {
       pizza.cost += extraCheeseUpcharge
     }
@@ -81,10 +63,15 @@ function getPizzaOrder() {
   // if order is NOT for delivery, set pizza.saleType to "take-out"
   // if order if for delivery, add deliveryFee to pizza.cost
   // YOUR CODE HERE
-  //boolean(pizza.saletype == delivery)
+  if (isDelivery === true) {
+    pizza.saleType === delivery
+  } else {
+    pizza.saleType === takeout
+  }
   if (pizza.saleType === 'delivery') {
     pizza.cost += deliveryFee
   }
+
 
   return pizza
 }
